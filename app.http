@@ -1,0 +1,86 @@
+
+// GET Todo List 
+GET http://localhost:3000/todos/?status=DONE
+### 
+
+
+// GET Specific Todo 
+GET http://localhost:3000/todos/7
+### 
+
+//GET Todo Based On Date 
+GET http://localhost:3000/agenda/?date=2021-1-12
+###   
+
+// Create Todo 
+POST http://localhost:3000/todos/ 
+Content-Type: application/json 
+
+
+{
+    "id":7,
+    "todo":"Finalize event theme",
+    "priority":"LOW",
+    "status":"TO DO",
+    "category":"HOME",
+    "dueDate":"2021-02-22"
+}
+### 
+
+// Update Specific Todo 
+PUT http://localhost:3000/todos/1 
+Content-Type: application/json 
+
+{
+    "status":"DONE"
+}
+###  
+
+// Update Todo Priority 
+PUT http://localhost:3000/todos/1  
+Content-Type: application/json 
+ 
+{
+    "priority":"HIGH"
+}
+### 
+// UPDATE Category
+PUT http://localhost:3000/todos/1 
+Content-Type: application/json 
+
+{
+    "category":"LEARNING"
+}
+
+### 
+// UPDATE TODO 
+PUT http://localhost:3000/todos/1 
+Content-Type: application/json 
+
+{
+    "todo":"Learn Node JS"
+}
+### 
+
+
+
+// UPDATE Due Date 
+PUT http://localhost:3000/todos/1 
+Content-Type: application/json 
+
+{
+    "dueDate":"2021-03-16"
+}
+###
+
+
+//DELETE Todo 
+DELETE http://localhost:3000/todos/6
+
+
+
+
+
+
+
+
